@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SessionId__c</fullName>
+    <description>Contains the session id of the log. It will be encrypted using the deterministic algorithm in Shield to support sorting/filtering and SOQLs.</description>
+    <externalId>false</externalId>
+    <label>Session Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

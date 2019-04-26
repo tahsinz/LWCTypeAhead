@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Search_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Label</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Search_Place_Holder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Place Holder</shortDescription>
+        <value>Type something to search</value>
+    </labels>
+</CustomLabels>

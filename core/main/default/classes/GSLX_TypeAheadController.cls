@@ -9,7 +9,7 @@ public class GSLX_TypeAheadController {
 
    
    
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static  List<GSLX_TypeAheadItemWrapper> getSearchResults(String searchTerm, String searchGroup, String returnFields, Integer limitOfRecord, 
                                                 Integer Offset, String whereClause, String orderString){
             System.debug('Search term: '+searchTerm);

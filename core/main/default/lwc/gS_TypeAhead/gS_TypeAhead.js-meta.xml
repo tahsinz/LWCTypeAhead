@@ -2,10 +2,35 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="GS_TypeAhead">
     <apiVersion>45.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>TypeAhead Component</masterLabel>
+    <masterLabel>GS TypeAhead</masterLabel>
     <targets>
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
+        <target>lightning__RecordPage</target>
     </targets>
-   
+   <targetConfigs>   
+        <targetConfig targets="lightning__RecordPage, lightningCommunity__Default">
+            <property name="PlaceHolderText" type="String" default="Search" label= "PlaceHolder Text" description="The text that will be displayed in the search box"/>
+            <property name="MinLength" type="Integer" default="3" label="Minimum Character Length for Searching"/>
+            <property name="SearchLimit" type="Integer" default="10"  label="Search Result Limit" description="SOSL Limit for records. Default to 10." />
+            <property name="SortByFields" type="String" default="Id" label="Sort By Fields" description="SOSL sort by field." />
+            <property name="SearchGroups" type="String" default="ALL FIELDS" label="Search Groups" description="SOSL Group fields. Value can be ALL FIELDS,EMAIL FIELDS,NAME FIELDS, PHONE FIELDS, SIDEBAR FIELDS. Invalid choices will result to ALL FIELDS"/>
+            <property name="ReturningFields" type="String" default="Id"  label="Returning Fields" description="Please ensure you have Id for all the sobjects mentioned." />
+            <property name="SearchOffset" type="Integer" default="0"  label="Search Offset" description="SOSL Offset field. Default to 0"/>
+        
+            <property name="LoadingHTML" type="String" default="" label="Loading HTML" description='HTML template to show when search is going on at the background '/>
+            <property name="NoResultHTML" type="String" default="" label="No Result HTML" description='HTML template to show when no result is found' />
+            <property name="SearchItemHTML" type="String" default="" label="Search Item HTML" description="Template inlcuding variables for search dropdown display. Use variables in brackets i.e.{Name}" />
+            <property name="SearchItemLandingPageURLPrefix" type="String" default="" label="Search Item Landing Page URL Prefix" description="The url to taken when a search item is selected or clicked. Use variables in brackets i.e.{Name}" />
+            <property name="SearchResultLandingPageURLPrefix" type="String" default="/searchpage" label="Search Result Landing Page URL Prefix" description="The url to taken when a search textbx button is pressed. The search term (variable searchTerm) is stored in the session storage and can be ussed for the cusotmized search page." />
+            <property name="CustomCssUrl" type="String" default=""  label="Custom CSS URL" description="This file will help to override the styling of the typeahead. You can input full the full/absolute url or static resources. For static resources, please use the format '$Resource.Typeahead/path/to/file.css'" />
+            
+            <property name="DataCacheEnabled" type="Boolean" default="true" label="Data Cache Enabled" />
+            
+            <property name="SearchWhereClause" type="String" default=""  label="Search Where Clause" description="SOSL where clause."/>
+            <property name="SearchItemTextBoxVisibleField" type="String" default="Name" label="The Salesforce field's that will be visible in typeahead textbox"  />
+            <property name="HighlightResult" type="Boolean" default="true" label="Highlight the results"/>
+            
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

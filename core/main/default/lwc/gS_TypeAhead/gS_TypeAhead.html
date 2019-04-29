@@ -1,16 +1,19 @@
 <template>
     <div >
 	    <div class="inner">
-	      <div class="slds-form-element">
-	        <div class="slds-form-element__control slds-input-has-icon arb-input-has-autocomplete">
-	          <span class="global-search-label">{PlaceHolderText}</span>
-	          <div id="arb-global-header__search-wrap">
-							<input type="text" id="global-search" class="slds-input" placeholder={PlaceHolderText} />
-	            <lightning-button id="searchBarButton"  icon-name="utility:search" class="slds-button slds-button--brand slds-button--border-match" title="Search" onclick={goToSearchPage}>  
+	      <div class="slds-form-element" >
+	          <div class="helpCenterHomeHero commThemeCmp forceCommunityThemeSearch forceCommunityThemeSearchHero">
+							<div class="search-box">
+							<input class="search-input search-input--right gs-global-search" aria-autocomplete="list" type="text" placeholder={PlaceHolderText} />
+							<lightning-button id="searchBarButton" icon-name="utility:search" class="slds-button search-inputSearchButton search-inputSearchButton--right slds-button_icon-border" title="Search" onclick={goToSearchPage}>  
 							</lightning-button>
+						  </div>
 	          </div>
-	        </div>
-	      </div>
+	       </div>
 	    </div>
-	  </div>
+		</div>
+	
+	
+	
+	
 </template>
